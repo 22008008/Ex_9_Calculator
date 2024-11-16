@@ -1,4 +1,5 @@
-## Ex.No:9 Develop a simple calculator using android studio.
+# Date:5.10.2024
+# Ex.No:9 Develop a simple calculator using android studio.
 ## AIM:
 To develop a program to develop a simple calculator in Android Studio.
 
@@ -271,8 +272,8 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/4ee34b97-1066-4d72-9fd2-c15a3fe925a8)
 
+<img src="https://github.com/user-attachments/assets/4ee34b97-1066-4d72-9fd2-c15a3fe925a8" width=300>
 
 ## RESULT
 Thus a Simple Android Application develop a program to create simple calculator in Android Studio is developed and executed successfully.
