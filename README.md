@@ -40,8 +40,7 @@ Registeration Number :212222220049
     android:layout_height="match_parent"
     android:background="@color/white"
     tools:context=".MainActivity">
-
-    <TextView
+<TextView
         android:layout_width="194dp"
         android:layout_height="43dp"
         android:layout_marginStart="114dp"
@@ -58,8 +57,7 @@ Registeration Number :212222220049
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
+<EditText
         android:id="@+id/num1"
         android:layout_width="364dp"
         android:layout_height="28dp"
@@ -75,8 +73,7 @@ Registeration Number :212222220049
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
+<EditText
         android:id="@+id/num2"
         android:layout_width="363dp"
         android:layout_height="30dp"
@@ -92,8 +89,7 @@ Registeration Number :212222220049
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
+<TextView
         android:id="@+id/result"
         android:layout_width="356dp"
         android:layout_height="71dp"
@@ -109,8 +105,7 @@ Registeration Number :212222220049
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
+<Button
         android:id="@+id/sum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -125,8 +120,7 @@ Registeration Number :212222220049
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
+<Button
         android:id="@+id/sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -141,8 +135,7 @@ Registeration Number :212222220049
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
+<Button
         android:id="@+id/div"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -158,8 +151,7 @@ Registeration Number :212222220049
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
+<Button
         android:id="@+id/mul"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -174,14 +166,11 @@ Registeration Number :212222220049
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 ### MainActivity.java:
 ```
 package com.example.exp9;
-
 import androidx.appcompat.app.AppCompatActivity;
 //import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -192,12 +181,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Bundle;
 import android.os.Bundle;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
     EditText e1, e2;
@@ -208,63 +195,45 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-
     public boolean getNumbers() {
 
         e1 = (EditText) findViewById(R.id.num1);
-
         e2 = (EditText) findViewById(R.id.num2);
-
         t1 = (TextView) findViewById(R.id.result);
-
         String s1 = e1.getText().toString();
-
         String s2 = e2.getText().toString();
-
         if ((s1.equals(null) && s2.equals(null))
                 || (s1.equals("") && s2.equals(""))) {
-
             String result = "Please enter a value";
             t1.setText(result);
-
             return false;
         } else {
             num1 = Integer.parseInt(s1);
-
             num2 = Integer.parseInt(s2);
         }
-
         return true;
     }
 
     public void doSum(View v) {
-
         if (getNumbers()) {
             int sum = num1 + num2;
             t1.setText(num1+"+"+num2+"="+Integer.toString(sum));
         }
     }
-
     public void doSub(View v) {
-
         if (getNumbers()) {
             int sub = num1 - num2;
             t1.setText(num1+"-"+num2+"="+Integer.toString(sub));
         }
     }
-
     public void doMul(View v) {
-
         if (getNumbers()) {
             int mul = num1 * num2;
             t1.setText(num1+"*"+num2+"="+Integer.toString(mul));
         }
     }
-
     public void doDiv(View v) {
-
         if (getNumbers()) {
-
             double div = num1 / (num2 * 1.0);
             t1.setText(num1 + "/" + num2 + "=" + Double.toString(div));
         }
